@@ -1,13 +1,21 @@
 # COPD Analysis
 
+# Abstract
+Chronic obstructive pulmonary disease (COPD) is a major global health issue, causing breathing difficulties due to narrowed airways. It’s the fourth leading cause of death worldwide, with over 3 million cases annually in the United States. This study focused on understanding how lung function changes over time, specifically looking at forced expiratory volume in 1 second (FEV1) and follow-up data from five years later (FEV1 Phase 2).
+
+We analyzed data from the COPDGene project, which collected information from thousands of participants, including spirometry results and health details related to COPD. Using methods like descriptive statistics, t-tests, linear regression, and random forest models, we explored the relationships between lung function and factors like smoking status, gender, and other health indicators.
+
+Our results showed that people who had never smoked had the best lung function, and those who quit smoking had better outcomes than current smokers. FEV1 was strongly linked to FEV1 Phase 2, making it a key predictor of future lung health. Additional predictors included FVC (forced vital capacity), the FEV1/FVC ratio, and lung gas-trapping percentages. Random forest models also accurately predicted changes in lung function over time.
+
+In summary, this study highlights important factors that influence COPD progression and emphasizes the value of monitoring FEV1 and related metrics. These findings can help guide early interventions and improve management strategies for individuals with COPD.
+
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
 - [Results](#results)
 
 ### Project Overview
-Chronic obstructive pulmonary disease (COPD) is a serious lung condition affecting over 16 million Americans and ranks as the fourth leading cause of death in the United States. While COPD can result from factors like toxic inhalation or asthma, cigarette smoking remains the most common cause.
-
 This project utilizes data from the COPDGene research group, which includes spirometry measurements from thousands of research participants. Spirometry is a critical tool for assessing COPD severity by measuring lung function through forced exhalation.
 
 #### Key Spirometry Metrics Analyzed:
