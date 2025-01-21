@@ -1,6 +1,6 @@
 # COPD Analysis
 
-# Abstract
+## Abstract
 Chronic obstructive pulmonary disease (COPD) is a major global health issue, causing breathing difficulties due to narrowed airways. It’s the fourth leading cause of death worldwide, with over 3 million cases annually in the United States. This study focused on understanding how lung function changes over time, specifically looking at forced expiratory volume in 1 second (FEV1) and follow-up data from five years later (FEV1 Phase 2).
 
 We analyzed data from the COPDGene project, which collected information from thousands of participants, including spirometry results and health details related to COPD. Using methods like descriptive statistics, t-tests, linear regression, and random forest models, we explored the relationships between lung function and factors like smoking status, gender, and other health indicators.
