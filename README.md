@@ -43,16 +43,17 @@ EDA involved exploring the COPD dataset to answer key questions, such as:
 
 ### Data Analysis
 
-#### 95% confidence interval
+``` R
+# 95% confidence interval
 subsetdat1 <- dat1[dat1$smoking_status %in% c("Current smoker", "Former smoker"), ]
 t.test(FEV1_phase2 ~ smoking_status, data = subsetdat1, conf.level = 0.95)
 
-#### Mean squared error function
+# Mean squared error function
 mse <- function(true, pred) {
   return(mean((true - pred)^2))
 }
 
-#### Random forest
+# Random forest
 fit3 <- randomForest(FEV1_phase2 ~ .,
                     data = train [, -(1:3)],
                     importance = TRUE,
@@ -63,19 +64,21 @@ fit3 <- randomForest(FEV1_phase2 ~ .,
                     nodesize = 10,    # minimum size of terminal nodes
                     maxnodes = NULL, # maximum number of terminal nodes a tree can have
                     )
-#### Calculate MSE on testing dataset
+# Calculate MSE on testing dataset
 mse(valid$FEV1_phase2, predict(fit3, newdata = valid))
 
-#### Find predictions using random forest
+# Find predictions using random forest
 FEV1_phase2_predictions <- predict(fit3, dat2)
 preds <- data.frame(sid = dat2$sid, FEV1_phase2_predictions)
 
-#### Plot importance graph
+# Plot importance graph
 options(repr.plot.width = 60, repr.plot.height = 8)
 
 importance <- fit3$importance[, 1]
 importance <- sort(importance, decreasing = TRUE) / max(importance)
 barplot(importance)
+
+```
 
 ### Results
 The analysis results are summarized as follows:
